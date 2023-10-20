@@ -6,17 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Registrate en nuestra web</h1>
-    <form action="ejemploRegistro.php" method="get">
+    <form action="loginvalidador.php" method="get">
         <label for="nombre">Nombre:</label>
         <input id="nombre" type="text" name="nombre"><br/>
-        <label for="email">Email:</label>
-        <input id="email" type="text" name="email"><br/>
-        <label for="condiciones">Aceptar condiciones:</label>
-        <input id="condiciones" type="checkbox" name="condiciones"><br/>
+        <label for="pass">Pass:</label>
+        <input id="pass" type="text" name="pass"><br/>
 
         <input type="submit">
     </form>
-
 </body>
 </html>
