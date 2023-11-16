@@ -7,6 +7,7 @@
 
         // Crear una conexión
         include('conexionbbdd.php');
+        //$conn = new mysqli("localhost", "root", "", "proyectoPHP");
 
         // Construimos la consulta
         $sql = "select * from productos";
