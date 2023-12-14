@@ -46,4 +46,15 @@
     echo "<h1>CustomTabla</h1>";
     imprimeCustomTabla(5, 10);
 
+
+    $sql = "INSERT INTO usuarios ($nombre, $pass, 1, now())"
+
+
+    $nuevoEstado = !$EstadoActual
+
+    if($estadoActual == 1)
+        nuevosetado = 0
+    else
+        nuevoestado =1
+
 ?>

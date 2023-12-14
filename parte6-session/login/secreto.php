@@ -9,7 +9,7 @@
     <h1>Secreto</h1>
     <?php
         session_start();
-        if(!isset($_SESSION["logged"]) && $_SESSION["logged"] != true){
+        if(!isset($_SESSION["logged"]) && $_SESSION["nombre"] != "admin"){
             header("Location: index.php");
         }
             
