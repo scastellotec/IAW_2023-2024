@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <ul>
+        <li id="user_msg" style="color:red">El id de usuario tiene que ser un numero entre 0 y 100</li>
+        <li id="pass_msg" style="color:red">El password tiene que tener al menos 5 caracteres</li>
+        <li id="term_msg" style="color:red">Debes aceptar los terminos y condiciones</li>
+    </ul>
+
+    <form id="formulario">
+        <fieldset>
+            <label for="user">ID de usuario:</label>
+            <input type="number" name="user" id="user"><br>
+            <label for="pass">Password</label></label>
+            <input type="text" name="pass" id="pass"><br>
+            <input type="checkbox" name="term" id="term"><label for="term">Acepto terminos y condiciones</label></label><br>
+            <input type="submit" value="Enviar"/>
+        </fieldset>
+    </form>
+
+    <script defer src="script.js"></script>
+</body>
+</html>
