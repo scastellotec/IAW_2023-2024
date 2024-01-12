@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <h1 class="text-center">Carrito de la compra</h1>
+
+    <div class="container">
+        <table class="table mx-auto">
+            <thead>
+                <tr>
+                    <th class="text-center" scope="col">Producto</th>
+                    <th class="text-center" scope="col">Nombre</th>
+                    <th class="text-center" scope="col">Cantidad</th>
+                    <th class="text-center" scope="col">Precio</th>
+                    <th class="text-center" scope="col">Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" id="id1">1</th>
+                    <td>Producto uno</td>
+                    <td>
+                        <button id="suma1" class="btn btn-outline-dark suma">+</button>
+                        <input id="cant1" type="number" class="input-mini text-center" value="0">
+                        <button id="resta1" class="btn btn-outline-dark">-</button></td>
+                    <td><input id="valor1" type="number" class="text-end" value="72"></td>
+                    <td id="sub1" class="text-end">0</td>
+                </tr>
+                <tr>
+                    <th id="id2" scope="row">2</th>
+                    <td>Producto dos</td>
+                    <td>
+                        <button id="suma2" class="btn btn-outline-dark suma">+</button>
+                        <input id="cant2" type="number" class="input-mini text-center" value="0">
+                        <button id="resta2" class="btn btn-outline-dark">-</button></td>
+                    <td><input id="valor2" type="number" class="text-end" value="125"></td>
+                    <td id="sub2" class="text-end">0</td>
+                </tr>
+                <tr>
+                    <th id="id3" scope="row">3</th>
+                    <td>Producto tres</td>
+                    <td>
+                        <button id="suma3" class="btn btn-outline-dark suma">+</button>
+                        <input id="cant3" type="number" class="input-mini text-center" value="0">
+                        <button id="resta3" class="btn btn-outline-dark">-</button>
+                    </td>
+                    <td><input id="valor3" type="number" class="text-end" value="250"></td>
+                    <td id="sub3" class="text-end">0</td>
+                </tr>
+                <tr>
+                    <th id="id4" scope="row">4</th>
+                    <td>Producto cuatro</td>
+                    <td>
+                        <button id="suma4" class="btn btn-outline-dark suma">+</button>
+                        <input id="cant4" type="number" class="input-mini text-center" value="0">
+                        <button id="resta4" class="btn btn-outline-dark">-</button></td>
+                    <td><input id="valor4" type="number" class="text-end" value="300"></td>
+                    <td id="sub4" class="text-end">0</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th id="total" colspan="5" class="text-end">0</th>
+                </tr>
+            </tfoot>
+
+        </table>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script defer src="script.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        -->
+</body>
+
+</html>
