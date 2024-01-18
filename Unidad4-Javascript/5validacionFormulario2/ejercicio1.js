@@ -73,5 +73,6 @@ function habilitarBoton(evt){
     }
 }
 
+
 const form = document.getElementById("signup");
 form.addEventListener("submit", habilitarBoton);
