@@ -11,22 +11,25 @@
 <form id="signup" class="form">
             <h1>Sign Up</h1>
 
-            <div>
+            <div id="cajaUserId">
                 <label for="userid">User id:</label>
                 <input type="number" name="userid" id="userid" autocomplete="off" placeholder="Enter your id">
+                <p id="errorUserID" style="display: none">El id no es correcto</p>
             </div>
 
             <div>
                 <label for="password">Password:</label>
                 <input type="password" name="password" id="password" autocomplete="off" placeholder="Enter a strong password">
+                <p id="errorPassLong" style="display: none">El pass es muy corto</p>
             </div>
 
             <div>
                 <label for="username">Confirm Password:</label>
-                <input type="password" name="confirm-password" id="confirm-password" autocomplete="off" placeholder="Reenter your password">
+                <input type="password" name="confirmPassword" id="confirmPassword" autocomplete="off" placeholder="Reenter your password">
+                <p id="errorPassRepeat" style="display: none">El pass don't match</p>
             </div>
             <div>
-                <input type="submit" value="Sign Up" class="btn">
+                <input type="submit" value="Sign Up" class="btn" id="btnEnviar" disabled>
             </div>
         </form>
 </body>
