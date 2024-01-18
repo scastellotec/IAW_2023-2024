@@ -1,22 +1,22 @@
-/*const button = document.querySelector('button')
-button.disabled = true // esta linea activa o desactiva el boton. Se puede desactivar poniendo false
-*/
+// Mapeamos todos los campos y boton que usaremos
 const userId = document.getElementById("userid");
 const password = document.getElementById("password");
 const confirmPassword = document.getElementById("confirmPassword");
 const btnEnviar = document.getElementById("btnEnviar");
 
+// Mapeo los errores para mostrarlos u ocultarlos
 const errorUserID = document.getElementById("errorUserID");
 const errorPassLong = document.getElementById("errorPassLong");
 const errorPassRepeat = document.getElementById("errorPassRepeat");
 
+// Estas variables me sirven para determinar si se cumplen todos los requisitos
 var useridOK = false;
 var passOK = false;
 var passrepeatOK = false;
 
 userId.addEventListener("input", validarUserId);
 
-function validarUserId(){
+function validarUserId(evt){
     if(userId.value >=1 && userId.value <= 99){
         errorUserID.style = "display: none";
         console.log("userid OK");
@@ -26,12 +26,12 @@ function validarUserId(){
         console.log("userid NOK");
         useridOK = false;
     }
-    habilitarBoton();
+    habilitarBoton(evt);
 }
 
 password.addEventListener("input", validarPassword);
 
-function validarPassword(){
+function validarPassword(evt){
     if(password.value.length >= 5){
         errorPassLong.style = "display: none";
         console.log("pass longitud OK");
@@ -41,12 +41,12 @@ function validarPassword(){
         console.log("pass longitud NOK");
         passOK = false;
     }
-    habilitarBoton();
+    habilitarBoton(evt);
 }
 
 confirmPassword.addEventListener("input", validarConfirmPassword);
 
-function validarConfirmPassword(){
+function validarConfirmPassword(evt){
     if(confirmPassword.value == password.value){
         errorPassRepeat.style = "display: none";
         console.log("confirmPass OK");
@@ -56,15 +56,22 @@ function validarConfirmPassword(){
         console.log("confirmPass NOK");
         passrepeatOK = false;
     }
-    habilitarBoton();
+    habilitarBoton(evt);
 }
 
-function habilitarBoton(){
+
+
+function habilitarBoton(evt){
     if(useridOK && passOK && passrepeatOK){
-        btnEnviar.disabled = false;
+        //btnEnviar.disabled = false;
+
         console.log("puedes enviar");
     }else{
-        btnEnviar.disabled = true;
+        //btnEnviar.disabled = true;
+        evt.preventDefault();
         console.log("NO puedes enviar");
     }
 }
+
+const form = document.getElementById("signup");
+form.addEventListener("submit", habilitarBoton);
