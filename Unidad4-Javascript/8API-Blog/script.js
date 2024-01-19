@@ -8,6 +8,7 @@ fetch(urlApi+"/posts") // Esto hace la llamada a la URL
   })
   .then(function(json) { // En este bloque hago lo que quiero con el JSON
     for(let i=0; i < json.length; i++){
+        // Forma 1 de hacerlo
         let articlePost = document.createElement("article");
         let articleTitulo = document.createElement("h2");
         let articleBody = document.createElement("p");
@@ -17,12 +18,14 @@ fetch(urlApi+"/posts") // Esto hace la llamada a la URL
         articlePost.appendChild(articleBody);
         mainSection.appendChild(articlePost);
 
-        let post =  "<article>"
+        
+        // Forma 2 de hacerlo
+        /*let post =  "<article>"
                     +"<h2>"+json[i].title+"</h2>"
                     +"<p>"+json[i].body+"</p>"
                     +"</article>";
         
-        mainSection.innerHTML += post;
+        mainSection.innerHTML += post;*/
     }
   });
 

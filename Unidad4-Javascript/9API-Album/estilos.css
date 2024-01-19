@@ -1,0 +1,27 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+header{
+    background-color: bisque;
+    color: brown;
+    text-align: center;
+}
+header h1{
+    margin: 0px;
+}
+main{
+    display: flex;
+}
+#albums{
+    background-color: darkgrey;
+    width: 30%;
+}
+#photos{
+    background-color: aquamarine;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
