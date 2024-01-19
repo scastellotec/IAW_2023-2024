@@ -16,6 +16,13 @@ fetch(urlApi+"/posts") // Esto hace la llamada a la URL
         articlePost.appendChild(articleTitulo);
         articlePost.appendChild(articleBody);
         mainSection.appendChild(articlePost);
+
+        let post =  "<article>"
+                    +"<h2>"+json[i].title+"</h2>"
+                    +"<p>"+json[i].body+"</p>"
+                    +"</article>";
+        
+        mainSection.innerHTML += post;
     }
   });
 
