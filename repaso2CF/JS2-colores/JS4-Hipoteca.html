@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Hipoteca</title>
+</head>
+<body>
+    <h2>Calculadora de Hipoteca</h2>
+    <form onsubmit="calcularCuota(); return false;">
+        <div>
+            <label for="importe">Importe de Hipoteca (€):</label>
+            <input type="number" id="importe" name="importe" required>
+        </div>
+        <div>
+            <label for="interes">Tasa de Interés Anual (%):</label>
+            <input type="number" id="interes" name="interes" min="0" step="0.01" required>
+        </div>
+        <div>
+            <label for="annos">Años a pagar:</label>
+            <input type="number" id="annos" name="annos" min="1" required>
+        </div>
+        <button type="submit">Calcular Cuota Mensual</button>
+    </form>
+    <div id="resultado"></div>
+</body>
+</html>

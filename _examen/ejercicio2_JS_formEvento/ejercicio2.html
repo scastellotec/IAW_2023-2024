@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 - Añadir elementos</title>
+</head>
+<body>
+    <main>
+        <ul id="lista">
+        </ul>
+        <div id="formulario">
+            <input type="text" id="campoTexto">
+            <!-- Este lo añadiria mas tarde -->
+            <button id="boton">Añadir</button>
+        </div>
+    </main>
+    <script>
+        const boton = document.getElementById("boton");
+        const lista = document.getElementById("lista");
+        const campoTexto = document.getElementById("campoTexto");
+
+        boton.addEventListener("click",()=>{
+            lista.innerHTML += "<li>"+campoTexto.value+"</li>";
+        });
+    </script>
+</body>
+</html>

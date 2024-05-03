@@ -5,25 +5,38 @@
         Aqui os he contado el rollo de SQL-Injection
     */
 
-    $texto = $_REQUEST['texto'];
-    $ffin = $_REQUEST['fecha_finalizacion'];
+    if(empty($_REQUEST['texto'])
+         or empty($_REQUEST['fecha_finalizacion'])
+            or !isset($_REQUEST['nota'])){
+        $mensaje_enviar = "Faltan parametros";
 
-    // Grabar en la BBDD
+    }else if($_REQUEST['nota']<0 or $_REQUEST['nota']>10 ){
+        $mensaje_enviar = $_REQUEST['nota']." esta fuera de rango";
+    } else {
+        $texto = $_REQUEST['texto'];
+        $ffin = $_REQUEST['fecha_finalizacion'];
 
-    // Crear una conexión
-    $conn = new mysqli("localhost", "root", "", "examen2022"); // (IP servidor BBDD, usuario, password, nombre base de datos)
+        echo $texto[0].$apellido.".".   ($ciclo)."@iaw.com";
+        // Grabar en la BBDD
 
-    // Construyo la consulta
-    $sql = "insert into tareas (texto, estado, fecha_finalizacion, fecha_creacion) values ('$texto', 1, '$ffin', now())";
+        // Crear una conexión
+        include('conexionbbdd.php');
 
-    // ejecuto la consulta
-    $conn->query($sql);
+        // Construyo la consulta
+        $sql = "insert into tareas (texto, estado, fecha_finalizacion, fecha_creacion) values ('$texto', 1, '$ffin', now())";
 
-    // Cierro la conexión
-    $conn->close();
+        // ejecuto la consulta
+        $conn->query($sql);
+
+        // Cierro la conexión
+        $conn->close();
+
+        $mensaje_enviar = 'Tarea grabada correctamente con nota '.$_REQUEST['nota'];
+    }
     
     // Redirigir al formulario y un mensaje para el usuario
     session_start();
-    $_SESSION['mensaje'] = 'Tarea grabada correctamente';
-    header('Location: index.php');
+    $_SESSION['mensaje'] = $mensaje_enviar;
+    echo $mensaje_enviar
+    //header('Location: index.php');
 ?>

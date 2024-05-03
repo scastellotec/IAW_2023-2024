@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 - Formulario</title>
+</head>
+<body>
+    <main>
+        <form id="formulario" method="post" action="#">
+            <label for="pass1">Password:</label>
+            <input type="password" name="" id="pass1"><br/>
+            <label for="pass2">Repite password:</label>
+            <input type="password" name="" id="pass2"><br/>
+            <input type="submit">
+        </form>
+    </main>
+    <script>
+        const pass1 = document.getElementById("pass1")
+        const pass2 = document.getElementById("pass2")
+        const formulario = document.getElementById("formulario")
+
+        pass1.addEventListener("input", checkPass);
+        pass2.addEventListener("input", checkPass);
+
+        function checkPass(){
+            if (pass1.value == pass2.value && pass1.value.length >= 4){
+                console.log("correcto")
+                return true
+            }else{
+                console.log("incorrecto")
+                return false
+            }
+        }
+
+        formulario.addEventListener("submit", (evt)=>{
+            if(checkPass() == false)
+                evt.preventDefault();
+        })
+
+    </script>
+</body>
+</html>

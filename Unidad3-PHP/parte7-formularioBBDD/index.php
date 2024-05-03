@@ -16,9 +16,11 @@
             }
         ?>
     </p>
-    <form action="grabar.php" method="post">
+    <form action="grabar.php" method="get">
         <label for="texto">Texto de la tarea:</label><br>
         <input type="text" id="texto" name="texto" size="32"><br><br>
+        <label for="nota">Nota</label><br>
+        <input type="number" id="nota" name="nota"><br><br>
         <label for="fecha_finalizacion">Fecha finalización:</label><br>
         <input type="date" id="fecha_finalizacion" name="fecha_finalizacion"><br><br>
         <input type="submit" value="enviar">
@@ -32,7 +34,7 @@
         include('conexionbbdd.php');
 
         // Construimos la consulta
-        $sql = "select * from tareas where estado=1";
+        $sql = "select * from tareas where nombre=$nombre";
 
         // Ejecutamos y recogemos el resultado
         $result = $conn->query($sql);
@@ -52,7 +54,6 @@
 
             while($row = $result->fetch_assoc()) {
                 // El nombre a buscar el $row coincide con el nombre de las columnas
-                if($row['estado']==1){
                     echo "<tr>";
                     echo "<td>".$row['id']."</td>"; 
                     echo "<td>".$row['texto']."</td>"; 
@@ -62,7 +63,6 @@
                     echo "<td><a href='borrar.php?idborrar=".$row['id']."'>X</a></td>"; 
                     echo "<td><a href='update.php?idmodificar=".$row['id']."'>X</a></td>"; 
                     echo "</tr>";
-                }
             }
         echo "</table>";
 

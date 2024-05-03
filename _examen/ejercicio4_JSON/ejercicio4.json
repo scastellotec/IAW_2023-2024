@@ -1,0 +1,36 @@
+{
+    "posts": [
+      {
+        "id": 1,
+        "title": "Mi primer post",
+        "content": "Este es el contenido de mi primer post en WordPress",
+        "author": "Juan Perez",
+        "comments": [
+          {
+            "id": 101,
+            "author": "María Rodriguez",
+            "comment": "¡Gran post! ¡Sigue así!"
+          },
+          {
+            "id": 102,
+            "author": "Pedro Gomez",
+            "comment": "Interesante, gracias por compartir."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Segundo post",
+        "content": "Aquí va el contenido de mi segundo post",
+        "author": "Ana López",
+        "comments": [
+          {
+            "id": 103,
+            "author": "Carlos Sanchez",
+            "comment": "¡Excelente artículo!"
+          }
+        ]
+      }
+    ]
+  }
+  
